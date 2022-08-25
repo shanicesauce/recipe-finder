@@ -1,7 +1,12 @@
-header{
+/* header{
     background-color: rgba(0, 0, 0, 0.24);
     height: 52px;
     filter: blur(50%);
+} */
+header{
+    background-color: rgba(0, 0, 0, 0.359);
+    height: 52px;
+    box-shadow: 0px 0px 15px #000000;
 }
 
 body{
@@ -88,4 +93,10 @@ nav{
     top: 90%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-size: 22px;
+    text-shadow: 0px 0px 7px #000000;
+}
+#people{
+    border-radius: 8px;
+    font-size: 20px;
 }
