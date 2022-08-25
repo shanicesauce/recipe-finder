@@ -34,17 +34,52 @@ nav{
     margin-top: 40vh;
     font-size: 56px;
     margin-left: 22px;
+    color: white;
+    text-shadow: 0px 0px 5px #000000;
 }
 .card{
     flex-basis: 20%;
     height: 100%;
     cursor: pointer;
+    border-radius: 20px;
+    box-shadow: 5px 5px 25px #000000;
+    
 }
 
 .card:hover{
     flex-basis: 22%;
     height: 110%;
     cursor: pointer;
+    
+}
+
+.chicken-card{
+    background-image: url("./assets/card-chicken.jpg");
+    background-size: 160% 105%;
+    background-position: 10% 100%;
+    background-repeat: no-repeat;
+    
+}
+.fish-card{
+    background-image: url("./assets/card-fish.jpg");
+    background-size: 125% 110%;
+    background-position: 55% 100%;
+    background-repeat: no-repeat;
+    
+}
+.pork-card{
+    background-image: url("./assets/card-pork.jpg");
+    background-size: 125% 105%;
+    background-position: 55% 100%;
+    background-repeat: no-repeat;
+    
+}
+.beef-card{
+    background-image: url("./assets/card-beef.jpg");
+    background-size: 180% 105%;
+    background-position: 55% 100%;
+    background-repeat: no-repeat;
+    
 }
 
 .people-dropdown{
