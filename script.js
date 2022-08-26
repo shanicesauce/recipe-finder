@@ -8,16 +8,29 @@ var pork = document.querySelector(".pork-card")
 
 var getRecipeInfo = function(protein) {
     var recipeApi = "https://www.themealdb.com/api/json/v1/1/filter.php?c=" + protein
-    console.log(recipeApi);
-}
+    fetch(recipeApi)
+    .then(function(response){
+        if (response.ok){
+            response.json().then(function(data){
+                var meals = data.meals
+                var randomMeal = meals[Math.floor(Math.random() * meals.length)]
+                console.log(randomMeal);
+                var mealID = randomMeal.idMeal
+                console.log(mealID);
+            })
+        }
+    })
 
+}
 
 var proteinChoice = function(event){
     var protein = event.target.getAttribute("data-protein")
     if(protein){
-        getRecipeInfo(protein)
+        getRecipeInfo(protein);
     }
-    console.log(proteinChoice)
+
+
+   
 }
 
 chicken.addEventListener("click",proteinChoice)
