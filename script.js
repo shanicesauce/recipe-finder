@@ -79,3 +79,4 @@ fish.addEventListener("click",proteinChoice)
 pork.addEventListener("click",proteinChoice)
 
 
+
