@@ -3,6 +3,9 @@ var beef = document.querySelector(".beef-card")
 var fish = document.querySelector(".fish-card")
 var pork = document.querySelector(".pork-card")
 
+var recipeName = document.querySelector(".recipe")
+var proteinSection = document.querySelectorAll("div.tile")
+
 
 
 
@@ -26,8 +29,9 @@ var getRecipeInfo = function(protein) {
                     response.json().then(function(data){
                         var name = data.meals[0].strMeal
                         //append to html where name for recipe is
-                        console.log(name);
+                        recipeName.textContent = name
                         var recipe = data.meals[0].strInstructions
+                        proteinSection.classList.add("hide")
                         //append to html where instructions for recipe is
                         console.log(recipe);
 
