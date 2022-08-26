@@ -16,7 +16,11 @@ var getRecipeInfo = function(protein) {
                 var randomMeal = meals[Math.floor(Math.random() * meals.length)]
                 console.log(randomMeal);
                 var mealID = randomMeal.idMeal
-                console.log(mealID);
+                var mealPic = randomMeal.strMealThumb
+                console.log(mealPic);
+
+                var getRecipeApi = "www.themealdb.com/api/json/v1/1/lookup.php?i=" + mealID
+                console.log(getRecipeApi);
             })
         }
     })
