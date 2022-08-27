@@ -48,8 +48,8 @@ nav{
     height: 100%;
     cursor: pointer;
     border-radius: 20px;
-    box-shadow: 5px 5px 25px #000000;
-    
+    box-shadow: 5px 5px 15px #000000;
+
 }
 
 .card:hover{
@@ -61,10 +61,14 @@ nav{
 
 .chicken-card{
     background-image: url("./assets/card-chicken.jpg");
-    background-size: 155% 105%;
+    background-size: 175% 105%;
     background-position: 10% 100%;
     background-repeat: no-repeat;
-    
+
+}
+
+.chicken-card:hover{
+    background-size: 185% 105%;
 }
 .fish-card{
     background-image: url("./assets/card-fish.jpg");
@@ -80,12 +84,17 @@ nav{
     background-repeat: no-repeat;
     
 }
+
 .beef-card{
     background-image: url("./assets/card-beef.jpg");
-    background-size: 155% 110%;
+    background-size: 200% 110%;
     background-position: 55% 100%;
     background-repeat: no-repeat;
     
+}
+
+.beef-card:hover{
+    background-size: 205% 110%;
 }
 
 .people-dropdown{
@@ -111,4 +120,21 @@ nav{
     body {
         height:100vh;
     }
+    .tile.is-3{
+        flex: 0 0 auto;
+        /* width: 100%; */
+       
+    }
   }
+
+  /* @media only screen and (min-width: 1569px) {
+    .tile.is-3{
+        flex: 0 0 auto;
+        width: 50%;
+       
+    }
+    .tile{
+        
+        
+    }
+  } */
