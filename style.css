@@ -61,11 +61,16 @@ nav{
 
 .chicken-card{
     background-image: url("./assets/card-chicken.jpg");
-    background-size: 155% 105%;
-    background-position: 10% 100%;
+    background-size: 175% 105%;
+    background-position: 30% 100%;
     background-repeat: no-repeat;
     
 }
+
+.chicken-card:hover{
+    background-size: 185% 105%;
+}
+
 .fish-card{
     background-image: url("./assets/card-fish.jpg");
     background-size: 155% 110%;
@@ -82,11 +87,15 @@ nav{
 }
 .beef-card{
     background-image: url("./assets/card-beef.jpg");
-    background-size: 155% 110%;
+    background-size: 225% 110%;
     background-position: 55% 100%;
     background-repeat: no-repeat;
     
 
+}
+
+.beef-card:hover{
+    background-size: 235% 110%;
 }
 
 .people-dropdown{

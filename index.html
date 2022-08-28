@@ -13,6 +13,7 @@
         <h1 class="recipe"><i>Be a Chef with Recipe Finder</i></h1>
       </nav>
     </header>
+    <section class = "main-content">
     <div class="tile is-ancestor mx-6 my-6">
       
       <div class="tile is-vertical is-3">
@@ -43,8 +44,8 @@
           </div>
           </div>
         <div class="tile is-vertical is-3">
-          <div class="tile is-parent">
-            <article class="tile is-child box card fish-card" data-protein="seafood">
+          <div class="tile is-parent" onclick="proteinChoice()">
+            <article class="tile is-child box card fish-card" data-protein="seafood" >
               <figure class="image is-2by3" data-protein="seafood">
                 <p class="title has-text-white" data-protein="seafood">Seafood</p>
               </figure> 
@@ -52,6 +53,7 @@
           </div>
         </div>
     </div>
+  </section>
     <script src="./script.js"></script>
   </body>
 </html>
