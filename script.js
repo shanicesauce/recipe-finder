@@ -5,6 +5,7 @@ var pork = document.querySelector(".pork-card")
 
 var recipeName = document.querySelector(".recipe")
 var proteinSection = document.querySelectorAll("div.tile")
+var removeContent = document.querySelector(".main-content")
 
 
 
@@ -31,8 +32,12 @@ var getRecipeInfo = function(protein) {
                         //append to html where name for recipe is
                         recipeName.textContent = name
                         var recipe = data.meals[0].strInstructions
+<<<<<<< HEAD
                         var mainContent = document.querySelector(".main-content")
                         mainContent.innerHTML = " "
+=======
+                        removeContent.innerHTML=""
+>>>>>>> bb90379f888dc7222c99ab25a235291ad1a13ea4
                         //append to html where instructions for recipe is
                         console.log(recipe);
 
@@ -84,10 +89,8 @@ beef.addEventListener("click",proteinChoice)
 fish.addEventListener("click",proteinChoice)
 pork.addEventListener("click",proteinChoice)
 
-function testFunc(){
-    var mainContent = document.querySelector(".main-content")
-    mainContent.innerHTML = '<div class="tile is-ancestor mx-6 my-6"><div class="tile is-vertical is-3"><div class="tile is-parent"><article class="tile is-child box card chicken-card" data-protein="chicken"><figure class="image is-2by3" data-protein="chicken"><p class="title has-text-white" data-protein="chicken">Chicken</p></figure></article></div></div><div class="tile is-vertical is-3"><div class="tile is-parent"><article class="tile is-child box card beef-card" data-protein="beef"><figure class="image is-2by3" data-protein="beef"><p class="title has-text-white" data-protein="beef">Beef</p></figure> </article></div></div><div class="tile is-vertical is-3"><div class="tile is-parent"><article class="tile is-child box card pork-card" data-protein="pork"><figure class="image is-2by3" data-protein="pork"><p class="title has-text-white" data-protein="pork">Pork</p></figure> </article></div></div><div class="tile is-vertical is-3"><div class="tile is-parent" onclick="proteinChoice()"><article class="tile is-child box card fish-card" data-protein="seafood"><figure class="image is-2by3" data-protein="seafood"><p class="title has-text-white" data-protein="seafood">Seafood</p></figure> </article></div></div></div>'
-    // document.location.replace("./index.html")
+var backBtn = function(){
+    window.location.reload()
 }
 
 
