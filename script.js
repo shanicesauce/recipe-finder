@@ -31,7 +31,7 @@ var getRecipeInfo = function(protein) {
                         //append to html where name for recipe is
                         recipeName.textContent = name
                         var recipe = data.meals[0].strInstructions
-                        proteinSection.classList.add("hide")
+                        
                         //append to html where instructions for recipe is
                         console.log(recipe);
 
