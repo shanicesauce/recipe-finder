@@ -5,6 +5,7 @@ var pork = document.querySelector(".pork-card")
 
 var recipeName = document.querySelector(".recipe")
 var proteinSection = document.querySelectorAll("div.tile")
+var removeContent = document.querySelector(".main-content")
 
 
 
@@ -31,7 +32,7 @@ var getRecipeInfo = function(protein) {
                         //append to html where name for recipe is
                         recipeName.textContent = name
                         var recipe = data.meals[0].strInstructions
-                        
+                        removeContent.innerHTML=""
                         //append to html where instructions for recipe is
                         console.log(recipe);
 
@@ -82,5 +83,8 @@ beef.addEventListener("click",proteinChoice)
 fish.addEventListener("click",proteinChoice)
 pork.addEventListener("click",proteinChoice)
 
+var backBtn = function(){
+    window.location.reload()
+}
 
 
