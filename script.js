@@ -34,13 +34,7 @@ var getRecipeInfo = function(protein) {
                         var recipe = data.meals[0].strInstructions
                         removeContent.innerHTML=""
                         //append to html where instructions for recipe is
-                        var showRecipe = document.createElement("div")
-                        showRecipe.classList("tile is-vertical is-3 has-text-white")
-
-                        removeContent.appendChild(showRecipe)
-                          
-                        showRecipe.innerHTML = recipe
-
+                       console.log(recipe)
                         var ingredient1 = data.meals[0].strMeasure1 + " " + data.meals[0].strIngredient1
                         var ingredient2 = data.meals[0].strMeasure2 + " " + data.meals[0].strIngredient2
                         var ingredient3 = data.meals[0].strMeasure3 + " " + data.meals[0].strIngredient3
