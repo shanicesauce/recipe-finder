@@ -24,3 +24,17 @@
         height: 1000px;
         width: 1000px;
     }
+    .card-recipe{
+        flex-basis: 20%;
+        height: 700px;
+        cursor: pointer;
+        border-radius: 40px;
+        box-shadow: 5px 5px 25px #000000;
+        
+    }
+    .card-recipe-image{
+        background-image: url("https://www.themealdb.com/images/media/meals/tytyxu1515363282.jpg");
+        background-size: 100% 100%;
+        /* background-position: 0% 0%;
+        background-repeat: no-repeat; */
+    }

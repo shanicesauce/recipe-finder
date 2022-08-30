@@ -194,6 +194,7 @@ var proteinChoice = function(event){
     if(protein){
         getRecipeInfo(protein);
     }   
+    console.log("Test")
 }
 
 chicken.addEventListener("click",proteinChoice)
