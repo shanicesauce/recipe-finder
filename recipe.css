@@ -1,0 +1,26 @@
+.column {
+    background: rgb(221, 204, 189);
+    flex-direction: column;
+    
+    }
+
+    .recipe-container {
+
+        display: flex;
+        flex-direction: row;
+        margin-bottom: -300px;
+        
+    }
+
+    .image {
+
+        margin: 0;
+        height: 700px;
+        width: 700px;
+    }
+
+    .container {
+
+        height: 1000px;
+        width: 1000px;
+    }
