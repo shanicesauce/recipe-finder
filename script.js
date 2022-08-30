@@ -22,8 +22,10 @@ var getRecipeInfo = function(protein) {
                 var mealPic = randomMeal.strMealThumb
                 //append to html wherever recipe image will be shown
                 var mealImg = document.createElement("img")
+                mealImg.src= mealPic
                 removeContent.appendChild(mealImg)
-                mealImg.textContent=mealPic
+                
+                console.log(mealPic);
 
                
                 var getRecipeApi = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + mealID
