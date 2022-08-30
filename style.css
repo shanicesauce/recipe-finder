@@ -24,6 +24,20 @@ nav{
     height: 30px;
 
 }
+nav > .recipe{
+    margin-right: 4em;
+}
+nav > .back-button{
+    float: left;
+    margin-left: 2em;
+    background-color: rgba(0, 0, 0, 0.461);
+    padding: 4px 24px;
+    border-radius: 20px;
+    font-size: 28px;
+    box-shadow: 5px 5px 25px #0000009c;
+    cursor: pointer;
+
+}
 
 .card-container{
     
@@ -61,10 +75,13 @@ nav{
 
 .chicken-card{
     background-image: url("./assets/card-chicken.jpg");
-    background-size: 155% 105%;
+    background-size: 220% 105%;
     background-position: 10% 100%;
     background-repeat: no-repeat;
     
+}
+.chicken-card:hover{
+    background-size: 230% 105%;
 }
 .fish-card{
     background-image: url("./assets/card-fish.jpg");
@@ -82,11 +99,15 @@ nav{
 }
 .beef-card{
     background-image: url("./assets/card-beef.jpg");
-    background-size: 155% 110%;
+    background-size: 225% 110%;
     background-position: 55% 100%;
     background-repeat: no-repeat;
     
 
+}
+
+.beef-card:hover{
+    background-size: 235% 110%;
 }
 
 .people-dropdown{
