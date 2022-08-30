@@ -32,15 +32,9 @@ var getRecipeInfo = function(protein) {
                         //append to html where name for recipe is
                         recipeName.textContent = name
                         var recipe = data.meals[0].strInstructions
-<<<<<<< HEAD
-                        var mainContent = document.querySelector(".main-content")
-                        mainContent.innerHTML = " "
-=======
                         removeContent.innerHTML=""
->>>>>>> bb90379f888dc7222c99ab25a235291ad1a13ea4
                         //append to html where instructions for recipe is
-                        console.log(recipe);
-
+                       console.log(recipe)
                         var ingredient1 = data.meals[0].strMeasure1 + " " + data.meals[0].strIngredient1
                         var ingredient2 = data.meals[0].strMeasure2 + " " + data.meals[0].strIngredient2
                         var ingredient3 = data.meals[0].strMeasure3 + " " + data.meals[0].strIngredient3
