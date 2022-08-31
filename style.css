@@ -3,6 +3,14 @@
     height: 52px;
     filter: blur(50%);
 } */
+html{
+    overflow:scroll;
+    
+}
+.box{
+    background-color: rgba(0, 0, 0, 0.559);
+    box-shadow: 5px 5px 25px #000000;
+}
 header{
     background-color: rgba(0, 0, 0, 0.359);
     height: 52px;
@@ -13,8 +21,10 @@ body{
     background-attachment: fixed;
     background-image: url("./assets/main-bg.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
-    height:100%;
+    background-repeat:repeat-y;
+    min-height: 120vh;
+    /* height:100%;
+    width: 100vw; */
 }
 
 nav{

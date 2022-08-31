@@ -2,9 +2,17 @@ var chicken = document.querySelector(".chicken-card")
 var beef = document.querySelector(".beef-card")
 var fish = document.querySelector(".fish-card")
 var pork = document.querySelector(".pork-card")
-
+var instructionsContent = document.querySelector(".instructions-content")
 var recipeName = document.querySelector(".recipe")
 var removeContent = document.querySelector(".main-content")
+var mainDishContent = document.querySelector(".main-dish-content")
+var ingredientsContent = document.querySelector("#ingredients-content")
+var ingredientsCC = document.querySelector("#ingredients-content-container")
+var instructionsCC = document.querySelector("#instructions-content-container")
+var cardRecipeImage = document.querySelector(".card-recipe-image")
+
+var bodyElement = document.body.clientHeight
+var boxQuery = document.querySelector(".box")
 
 
 
@@ -21,9 +29,20 @@ var getRecipeInfo = function(protein) {
                 var mealID = randomMeal.idMeal
                 var mealPic = randomMeal.strMealThumb
                 //append to html wherever recipe image will be shown
-                var mealImg = document.createElement("img")
-                mealImg.src= mealPic
-                removeContent.appendChild(mealImg)
+                ingredientsCC.style.display="flex"
+                var mealImg = document.createElement("figure")
+                mealImg.style.height="700px"
+                
+                mealImg.style.minWidth="700px"
+                mealImg.style.maxWidth="700px"
+                mealImg.style.backgroundImage= "url(" + mealPic + ")"
+                mealImg.style.backgroundRepeat= "no-repeat"
+                mealImg.style.borderRadius= "20px"
+                mealImg.style.boxShadow= "5px 5px 25px #000000"
+                mealImg.classList.add("image","left","card-recipe","card-recipe-image")
+                mainDishContent.style.display="inline"
+                    
+                mainDishContent.appendChild(mealImg)
                 
                 console.log(mealPic);
 
@@ -57,11 +76,24 @@ var getRecipeInfo = function(protein) {
                         var ingredient19 = data.meals[0].strMeasure19 + " " + data.meals[0].strIngredient19
                         var ingredient20 = data.meals[0].strMeasure20 + " " + data.meals[0].strIngredient20
 
+                        var titleIngredients = document.createElement("h1")
                         var ingredients = document.createElement("div")
-                        ingredients.classList.add("container","columns","is-mobile","column","is-half","notification","subtitle","content","is-normal")
-                        removeContent.appendChild(ingredients)
-                        ingredients.textContent= "Ingredients: "
+                        // ingredients.classList.add("tile",  "container")
+                        titleIngredients.classList.add("ml-5", "mb-2")
+                        ingredients.classList.add("ml-5")
 
+                        ingredientsContent.appendChild(titleIngredients)
+                        ingredientsContent.appendChild(ingredients)
+                        ingredientsContent.style.borderRadius= "20px"
+                        ingredientsContent.style.boxShadow= "5px 5px 25px #000000"
+                        
+                        // ingredients.style.marginLeft="724px"
+                        // ingredients.style.minWidth="1424px"
+
+                        boxQuery.style.backgroundColor="#00000001"
+
+                        titleIngredients.textContent= "Ingredients: "
+                        titleIngredients.style.fontSize="2em"
                         var startList = document.createElement("ul")
                         ingredients.appendChild(startList)
 
@@ -148,15 +180,20 @@ var getRecipeInfo = function(protein) {
 
                         var recipe = data.meals[0].strInstructions
                         //append to html where recipe is
+                        instructionsCC.style.display = "flex"
                         var directions = document.createElement("div")
-                        directions.classList.add("subtitle", "column","is-full" , "notification")
+                        directions.classList.add("subtitle", "column","is-full", "has-text-white")
                         directions.textContent= "Instructions:"
-                        removeContent.appendChild(directions)
+                        instructionsContent.appendChild(directions)
                         var showRecipe = document.createElement("div")
-                        showRecipe.classList.add("column","is-full","notification")
+                        showRecipe.classList.add("column","is-full", "has-text-white")
                         showRecipe.textContent = recipe
                         directions.appendChild(showRecipe)
-                    
+                        
+                        var instructionsHeight = directions.style.height
+                        document.getElementsByTagName("BODY")[0].style.height = "140vh"
+                        
+                        console.log(instructionsHeight + "." + instructionsCC.style.height) 
                     
                     })
                 })
