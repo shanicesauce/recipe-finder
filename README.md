@@ -4,7 +4,7 @@
 ## Description
 
 To help active individuals such as full-time employees or students, moms, and dads, among other types of busy lives who require protein in a diet.
-Given four protein options to choose from, a random recipe will be generated, including instructions for the user to prepare. ​
+Given four protein options to choose from, a random recipe will be generated, including instructions for the user to prepare. If the user should want to return to the site and recreate a previous recipe they are given the option​
 
 
 ### User Story​
