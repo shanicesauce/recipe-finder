@@ -141,10 +141,52 @@ nav > .back-button{
 .hide > *{
     display: none;
 }
+.recipe{
+    display: inline;
+}
+.past-recipe{
+    
+    z-index: 4;
+    width: 96px;
+    display: inline;
+    border: 0px solid black;
+    height: 28px;
+    background-color: rgba(0, 0, 0, 0.461);
+    border-radius: 0px 20px 20px 0px;
+    font-size: 16px;
+    box-shadow: 5px 5px 25px #0000009c;
+    cursor: pointer;
+    color:white;
+}
+.past-recipe:hover {
+    width: fit-content;
+}
 
-
-  @media only screen and (min-width: 769px) {
+.past-recipe:hover > option{
+    display: block;
+    width: fit-content;
+    margin-bottom: 12px;
+}
+.select-recipe{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 2em;
+    display: inline;
+}
+#submit{
+    display: inline;
+    background-color: rgba(0, 0, 0, 0.461);
+    border: 0px solid black;
+    border-radius: 20px 0px 0px 20px;
+    font-size:16px;
+    box-shadow: 5px 5px 25px #0000009c;
+    cursor: pointer;
+    color: white;
+    margin-top: 0px;
+}
+  /* @media only screen and (min-width: 769px) {
     body {
         height:100vh;
     }
-  }
+  } */
