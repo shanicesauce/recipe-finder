@@ -6,7 +6,7 @@ var pork = document.querySelector(".pork-card")
 var recipeName = document.querySelector(".recipe")
 var removeContent = document.querySelector(".main-content")
 var resHistory = document.querySelector(".past-recipe")
-var oldRecipe = document.querySelector("#submit")
+var submitBtn = document.querySelector("#submit")
 
 
 
@@ -190,8 +190,10 @@ var getRecipeInfo = function(protein) {
                             localStorage.setItem("recipeHistory",JSON.stringify(recipeHistory))
                         } else {
                             pastRecipe = JSON.parse(pastRecipe)
+                            if (!pastRecipe.includes(name)){
                             pastRecipe.push(name)
-                            localStorage.setItem("recipeHistory",JSON.stringify(pastRecipe))
+                            localStorage.setItem("recipeHistory",JSON.stringify(pastRecipe));
+                            }
                         }
                     
                     })
@@ -205,24 +207,22 @@ var getRecipeInfo = function(protein) {
 
 }
 
-
-
-
-var prevRecipe = function() {
-    var pastRecipe = JSON.parse(localStorage.getItem("recipeHistory"))
+// var prevRecipe = function() {
+//     var pastRecipe = JSON.parse(localStorage.getItem("recipeHistory"))
     
- if (pastRecipe.length > 0){
-      for (var i = 0; i< pastRecipe.length; i++){
+//  if (pastRecipe.length > 0){
+//       for (var i = 0; i< pastRecipe.length; i++){
          
-     var recipeHis = document.createElement("a")
-     recipeHis.classList.add("btn", "prev") 
-      recipeHis.textContent = pastRecipe[i]
-      prevCity.appendChild(recipeHis)
+//      var recipeHis = document.createElement("a")
+//      recipeHis.classList.add("btn", "prev") 
+//       recipeHis.textContent = pastRecipe[i]
+//       prevCity.appendChild(recipeHis)
  
-     }
- }
- }
- prevRecipe
+//      }
+//  }
+//  }
+
+//  prevRecipe()
 
 var proteinChoice = function(event){
     var protein = event.target.getAttribute("data-protein")
@@ -241,7 +241,7 @@ var backBtn = function(){
     window.location.reload()
 }
 
-var prevRecipe = function() {
+var pastRecipe = function() {
         var pastRecipe = JSON.parse(localStorage.getItem("recipeHistory"))
         
      if (pastRecipe.length > 0){
@@ -249,6 +249,8 @@ var prevRecipe = function() {
          var recipeHis = document.createElement("option")
           recipeHis.textContent = pastRecipe[i]
           resHistory.appendChild(recipeHis)
+          choosenRecipe = resHistory[i].value;
+          console.log(choosenRecipe);
              
          }
      } else {
@@ -256,22 +258,17 @@ var prevRecipe = function() {
      }
      
     }
-prevRecipe()
+pastRecipe()
 
-oldRecipe.addEventListener("submit",function choosenRecipe(event){
-    choosenRecipe = oldRecipe.selectedIndex;
-     console.log(choosenRecipe);
-    console.log(event.target(choosenRecipe));
- })
-  
+submitBtn.addEventListener("click", recipeName)
 
+var recipeName = function(name) {
+    console.log("hello");
+    name = resHistory.value
+    console.log(name);
+    var recipeNameApi = "https://www.themealdb.com/api/json/v1/1/search.php?s=" + name
+    fetch(recipeNameApi)
+    console.log(recipeNameApi); 
 
-// var recipeName = function(name) {
-//     var recipeNameApi = "https://www.themealdb.com/api/json/v1/1/search.php?s=" + name
-//     fetch(recipeNameApi)
-//     .then(function(response){
-//         console.log(response);    
-// })
-// }
-// recipeName("mulukhiyah");
+}
 
