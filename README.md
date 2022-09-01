@@ -12,15 +12,15 @@ Given four protein options to choose from, a random recipe will be generated, in
 As an active individual, I want to find a recipe based on my protein choice; so that I can prepare diverse random meals. 
 
 ### Technologies Used
--Bulma
--Javascript
--TheMealDb Api
--Google Fonts
+- Bulma
+- Javascript
+- TheMealDb Api
+- Google Fonts
 
 ## Authors
-Shanice Sauceda
-Jaime Castillo 
-Diana Mandujano
+- Shanice Sauceda
+- Jaime Castillo 
+- Diana Mandujano
  
  
  https://shanicesauce.github.io/recipe-finder/
